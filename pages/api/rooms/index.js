@@ -3,9 +3,10 @@ import dbConnect from '../../../config/dbConnect';
 
 import { allRooms, newRooms } from '../../../controllers/roomControllers';
 
+import onError from '../../../middlewares/errors'
 
 
-const handler = nc();
+const handler = nc({ onError });
 
 dbConnect();
 
